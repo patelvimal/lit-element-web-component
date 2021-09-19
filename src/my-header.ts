@@ -13,6 +13,6 @@ export class MyHeader extends LitElement {
   name = 'Somebody';
 
   render() {
-    return html`<p class="header">Hello, ${this.name}!</p>`;
+    return html`<div class="header"><p >Hello, ${this.name}! </p><button class="btn-primary">Click Me</button></div>`;
   }
 }

@@ -3,7 +3,19 @@
 .header {
     height:$header-height;
     font-size:$font-size;
+    display: flex;
+    background: $background-color;
+}
 
-    
-        background: $background-color;
+
+.btn-primary {
+    border:none;
+    height: 20px;
+    width: 100px;
+}
+
+p {
+    margin: 0px;
+    padding: 0px 100px;
+    display: flex;
 }
