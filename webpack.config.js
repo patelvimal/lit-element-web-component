@@ -14,10 +14,18 @@ module.exports = {
                 use: 'ts-loader',
                 exclude: /node_modules/,
             },
+            {
+                test: /\.scss$/,
+                use: [
+                    { loader: "css-loader"},
+                    { loader: "sass-loader" }
+                ],
+                exclude: /node_modules/
+            }
         ],
     },
     resolve: {
-        extensions: ['.tsx', '.ts', '.js'],
+        extensions: ['.tsx', '.ts', '.js', '.css', '.scss'],
     },
     devServer: {
         static: {
