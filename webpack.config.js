@@ -17,8 +17,10 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [
-                    { loader: "css-loader"},
-                    { loader: "sass-loader" }
+                    { loader: "css-loader" },
+                    {
+                        loader: "sass-loader"
+                    }
                 ],
                 exclude: /node_modules/
             }
@@ -26,6 +28,9 @@ module.exports = {
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.js', '.css', '.scss'],
+        alias: {
+            '@styles': path.resolve(__dirname, 'src/styles')
+        }
     },
     devServer: {
         static: {
@@ -37,7 +42,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: 'index.html' 
+            template: 'index.html'
         })
     ],
 }
