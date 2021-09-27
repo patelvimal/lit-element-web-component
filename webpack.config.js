@@ -18,11 +18,19 @@ module.exports = {
                 test: /\.scss$/,
                 use: [
                     { loader: "css-loader" },
-                    {
-                        loader: "sass-loader"
-                    }
+                    { loader: "sass-loader" }
                 ],
-                exclude: /node_modules/
+                exclude: [/node_modules/, /\global.scss$/]
+
+            },
+            {
+                test: /\global.scss$/,
+                use: [
+                    { loader: "style-loader" },
+                    { loader: "css-loader" },
+                    { loader: "sass-loader" }
+                ],
+                exclude: [/node_modules/]
             }
         ],
     },

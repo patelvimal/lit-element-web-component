@@ -1,10 +1,11 @@
-@import '_variables';
+@import 'variables';
 
 .header {
     height:$header-height;
     font-size:$font-size;
     display: flex;
     background: $background-color;
+    position: sticky  !important;
 }
 
 
@@ -16,6 +17,6 @@
 
 p {
     margin: 0px;
-    padding: 0px 100px;
+    padding: 0px 480px;
     display: flex;
 }

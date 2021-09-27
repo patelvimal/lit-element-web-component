@@ -1,6 +1,8 @@
 import { html, css, LitElement, unsafeCSS } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import myStyles from '@styles/styles.scss';
+import '@styles/global.scss';
+import './navigation';
 
 @customElement('my-header')
 export class MyHeader extends LitElement {
@@ -13,6 +15,10 @@ export class MyHeader extends LitElement {
   name = 'Somebody';
 
   render() {
-    return html`<div class="header"><p >Hello, ${this.name}! </p><button class="btn-primary">Click Me</button></div>`;
+    return html`
+    <div class="header">
+        <p>Hello, ${this.name}! </p>
+        <my-navigation></my-navigation>
+    </div>`;
   }
 }
